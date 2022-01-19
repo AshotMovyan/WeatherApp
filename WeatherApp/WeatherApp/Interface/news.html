@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="/eel.js"></script>
+  <link rel="stylesheet" href="css/news.css">
+
+</head>
+<body>
+
+  <span style="font-size:30px;cursor:pointer; float:left;" onclick="openNav()">&#9776;</span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="mainpage.html"><img src="img/home.png" style="width: 40px;"></a>
+
+  <a href="mainpage.html"></a>
+  <a href="weather.html"><img src="img/weather mini.png" style="width: 45px;"></a>
+
+  <a href="https://t.me/rehtaeW_bot" target="_blank"><img src="img/iconfinder_social-56_1591869.png " style="width: 40px;"></a>
+  <a href="#"><img src="img/news mini.png" style="width: 45px;"></a>
+  <a href="#"><img src="img/lighton.png" style="width: 45px;"></a>
+
+</div>
+<!-- Header -->
+<div class="header">
+  <img src="img/newspage.png" alt=""><br>
+   <form class="form-inline" action="/action_page.php">
+          <input type="text" id="data_1" placeholder="Search...">
+          <br>
+            
+      </form><br>
+     
+      <button class="submit" value="Convert" onclick="sum()">OK</button>
+</div>
+
+<!-- Navigation Bar -->
+
+
+<!-- The flexible grid (content) -->
+
+<div class="row">
+  <div class="side">
+    <h2>der toxel</h2>
+    <h5>text</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <span id="name" class="name">Name</span>
+    <h2 id="title">Title</h2>
+    <h5 id="time">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text" class="text">Info</p>
+    <br>
+
+    <hr>
+    <span id="name2" class="name">Name</span>
+    <h2 id="title2">Title</h2>
+    <h5 id="time2">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text2" class="text"></p>
+    <br>
+
+    <hr>
+    <span id="name3" class="name">Name</span>
+    <h2 id="title3">Title</h2>
+    <h5 id="time3">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text3" class="text"></p>
+    <br>
+
+    <hr>
+    <span id="name4" class="name">Name</span>
+    <h2 id="title4">Title</h2>
+    <h5 id="time4">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text4" class="text"></p>
+    <br>
+
+    <hr>
+    <span id="name5" class="name">Name</span>
+    <h2 id="title5">Title</h2>
+    <h5 id="time5">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text5" class="text"></p>
+    <br>
+
+    <hr>
+    <span id="name6" class="name">Name</span>
+    <h2 id="title6">Title</h2>
+    <h5 id="time6">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text6" class="text"></p>
+    <br>
+
+    <hr>
+    <span id="name7" class="name">Name</span>
+    <h2 id="title7">Title</h2>
+    <h5 id="time7">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text7" class="text"></p>
+    <br>
+
+     <hr>
+    <span id="name8" class="name">Name</span>
+    <h2 id="title8">Title</h2>
+    <h5 id="time8">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text8" class="text"></p>
+    <br>
+
+
+       <hr>
+    <span id="name9" class="name">Name</span>
+    <h2 id="title9">Title</h2>
+    <h5 id="time9">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text9" class="text"></p>
+    <br>
+
+    <hr>
+    <span id="name10" class="name">Name</span>
+    <h2 id="title10">Title</h2>
+    <h5 id="time10">Date</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p id="text10" class="text"></p>
+    <br>
+
+    
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>google.com</h2>
+</div>
+
+  <script>
+  async function sum() {
+  var a = document.getElementById("data_1").innerHTML = "London";
+  eel.get_News(a)(callback);
+  }
+
+ function callback(newsHtmllist) {   
+  document.getElementById("name").innerHTML = newsHtmllist[0];
+  document.getElementById("title").innerHTML = newsHtmllist[1];
+  document.getElementById("time").innerHTML = newsHtmllist[3]; 
+  document.getElementById("text").innerHTML = newsHtmllist[2]; 
+
+  document.getElementById("name2").innerHTML = newsHtmllist[4];
+  document.getElementById("title2").innerHTML = newsHtmllist[5];
+  document.getElementById("time2").innerHTML = newsHtmllist[7]; 
+  document.getElementById("text2").innerHTML = newsHtmllist[6]; 
+
+  document.getElementById("name3").innerHTML = newsHtmllist[8];
+  document.getElementById("title3").innerHTML = newsHtmllist[9];
+  document.getElementById("time3").innerHTML = newsHtmllist[11]; 
+  document.getElementById("text3").innerHTML = newsHtmllist[10]; 
+
+  document.getElementById("name4").innerHTML = newsHtmllist[12];
+  document.getElementById("title4").innerHTML = newsHtmllist[13];
+  document.getElementById("time4").innerHTML = newsHtmllist[15]; 
+  document.getElementById("text4").innerHTML = newsHtmllist[14]; 
+
+  document.getElementById("name5").innerHTML = newsHtmllist[16];
+  document.getElementById("title5").innerHTML = newsHtmllist[17];
+  document.getElementById("time5").innerHTML = newsHtmllist[19]; 
+  document.getElementById("text5").innerHTML = newsHtmllist[18]; 
+
+  document.getElementById("name6").innerHTML = newsHtmllist[20];
+  document.getElementById("title6").innerHTML = newsHtmllist[21];
+  document.getElementById("text6").innerHTML = newsHtmllist[22];
+  document.getElementById("time6").innerHTML = newsHtmllist[23]; 
+
+  document.getElementById("name7").innerHTML = newsHtmllist[24];
+  document.getElementById("title7").innerHTML = newsHtmllist[25];
+  document.getElementById("text7").innerHTML = newsHtmllist[26];
+  document.getElementById("time7").innerHTML = newsHtmllist[27]; 
+
+  document.getElementById("name8").innerHTML = newsHtmllist[28];
+  document.getElementById("title8").innerHTML = newsHtmllist[29];
+  document.getElementById("text8").innerHTML = newsHtmllist[30];
+  document.getElementById("time8").innerHTML = newsHtmllist[31]; 
+
+  document.getElementById("name9").innerHTML = newsHtmllist[32];
+  document.getElementById("title9").innerHTML = newsHtmllist[33];
+  document.getElementById("text9").innerHTML = newsHtmllist[34];
+  document.getElementById("time9").innerHTML = newsHtmllist[35]; 
+
+  document.getElementById("name10").innerHTML = newsHtmllist[36];
+  document.getElementById("title10").innerHTML = newsHtmllist[37];
+  document.getElementById("text10").innerHTML = newsHtmllist[38];
+  document.getElementById("time10").innerHTML = newsHtmllist[39]; 
+}
+
+  </script>
+
+  <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "90px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript" src="/eel.js"></script>
+  <script type="text/javascript" src="/myscript.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/currency.css">
+  <link rel="shortcut icon" href="img/currency-favicon.png" type="image/x-icon">
+
+
+</head>
+<body style="text-align: center;">
+  <span style="font-size:30px;cursor:pointer; float:left;" onclick="openNav()">&#9776;</span>
+
+<h1 style="text-align: center; color: #FFFF;">Currency Converter</h1>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="mainpage.html"><img src="img/home.png" style="width: 40px;"></a>
+
+  <a href="mainpage.html"></a>
+  <a href="weather.html"><img src="img/weather mini.png" style="width: 45px;"></a>
+
+  <a href="https://t.me/rehtaeW_bot" target="_blank"><img src="img/iconfinder_social-56_1591869.png " style="width: 40px;"></a>
+  <a href="#"><img src="img/news mini.png" style="width: 45px;"></a>
+  <a href="#"><img src="img/lighton.png" style="width: 45px;"></a>
+
+</div>
+
+
+
+</div>
+<div class="main">
+
+</div>
+
+    <div class="mainConvert">
+  
+        <form class="form-inline" action="/action_page.php">
+          <input type="text" id="data_1" placeholder="Amount" name="email">
+          <input type="text" id="data_2" placeholder="From" name="pswd">
+          <input type="text" id="data_3" placeholder="To" name="pswd">
+          <br>
+            
+      </form><br>
+     
+      <button class="submit" value="Convert" onclick="sum()">Convert</button>
+
+        <div class="gencon" style="background: skyblue;">
+          <div style="float: left; margin-left: 50px; margin-top: 20px;">
+            <span id="info1"></span>
+            <span id="info2"></span><br>
+              <div style="float: left; margin-top: 20px;">
+                <span id="info3" style="font-size: 15px;"></span><br>
+                <span id="info4" style="font-size: 15px;"></span>
+              </div>
+          </div>
+        </div>
+    </div>
+
+      <div style="margin-top: 50px;"> 
+          <div class="flex-container">
+
+            <div class="flex-child magenta">
+              <div style="background-color: #F2F5FA; min-height: 40px; border-radius: 10px;">
+                <span style="font-size: 20px; position: relative; top: 7px; color: black;" id="firstconvt"></span>
+              </div>
+              <table class="tableq">
+                <tr>
+                  <td id="info5"></td>
+                  <td id="info6"></td>
+                </tr>
+                <tr>
+                  <td id="info7"></td>
+                  <td id="info8"></td>
+                </tr>
+                 <tr>
+                  <td id="info9"></td>
+                  <td id="info10"></td>
+                </tr>
+                <tr>
+                  <td id="info11"></td>
+                  <td id="info12"></td>
+                </tr>
+                <tr>
+                  <td id="info13"></td>
+                  <td id="info14"></td>
+                </tr>
+                <tr>
+                  <td id="info15"></td>
+                  <td id="info16"></td>
+                </tr>
+                <tr>
+                  <td id="info17"></td>
+                  <td id="info18"></td>
+                </tr>
+                <tr>
+                  <td id="info19"></td>
+                  <td id="info20"></td>
+                </tr>
+                <tr>
+                  <td id="info21"></td>
+                  <td id="info22"></td>
+                </tr>
+                <tr>
+                  <td id="info23"></td>
+                  <td id="info24"></td>
+                </tr>
+                  <tr>
+                  <td id="info25"></td>
+                  <td id="info26"></td>
+                </tr>
+              </table>
+            </div>
+            
+            <div class="flex-child green">
+              <div style="background-color: #F2F5FA; min-height: 40px; border-radius: 10px;">
+              <span style="font-size: 20px; position: relative; top: 7px; color: black;" id="secconvt"></span></div>
+
+              <table class="tableq">
+                <tr>
+                  <td id="info27"></td>
+                  <td id="info28"></td>
+                </tr>
+                <tr>
+                  <td id="info29"></td>
+                  <td id="info30"></td>
+                </tr>
+                 <tr>
+                  <td id="info31"></td>
+                  <td id="info32"></td>
+                </tr>
+                <tr>
+                  <td id="info33"></td>
+                  <td id="info34"></td>
+                </tr>
+                <tr>
+                  <td id="info35"></td>
+                  <td id="info36"></td>
+                </tr>
+                <tr>
+                  <td id="info37"></td>
+                  <td id="info38"></td>
+                </tr>
+                <tr>
+                  <td id="info39"></td>
+                  <td id="info40"></td>
+                </tr>
+                <tr>
+                  <td id="info41"></td>
+                  <td id="info42"></td>
+                </tr>
+                <tr>
+                  <td id="info43"></td>
+                  <td id="info44"></td>
+                </tr>
+                <tr>
+                  <td id="info45"></td>
+                  <td id="info46"></td>
+                </tr>
+                  <tr>
+                  <td id="info47"></td>
+                  <td id="info48"></td>
+                </tr>
+              </table>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+<div class="stats">
+      <div style="background-color: #F2F5FA; min-height: 70px; border-radius: 10px;">
+                <span id="statstext" class="statstext"></span>
+              </div>
+      <table class="statstable">
+        <thead>
+          <tr>
+            <th></th>
+            <td>Last 30 Days</td>
+            <td>Last 90 Days</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>High</td>
+            <td id="statsinf1"></td>
+            <td id="statsinf2"></td>
+
+          </tr>
+          <tr>
+            <td>Low</td>
+            <td id="statsinf3"></td>
+            <td id="statsinf4"></td>
+          </tr>
+          <tr>
+            <td>Average</td>
+            <td id="statsinf5"></td>
+            <td id="statsinf6"></td>
+          </tr>
+          <tr>
+            <td>Volatility</td>
+            <td id="statsinf7"></td>
+            <td id="statsinf8"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+
+
+
+</div>
+
+	<script>
+	async function sum() {
+  var a = document.getElementById("data_1").value;
+  var b = document.getElementById("data_2").value;
+  var c = document.getElementById("data_3").value;
+  eel.get_cur(a, b, c)(callback); // change here
+  }
+
+// add function as
+  function callback(cur)
+  {
+    document.getElementById("info1").innerHTML = cur[0];
+    document.getElementById("info2").innerHTML = cur[1];
+    document.getElementById("info3").innerHTML = cur[2];
+    document.getElementById("info4").innerHTML = cur[3];
+
+    document.getElementById("info5").innerHTML = cur[4][0];
+    document.getElementById("info6").innerHTML = cur[4][1];
+
+    document.getElementById("info7").innerHTML = cur[5][0];
+    document.getElementById("info8").innerHTML = cur[5][1];
+
+    document.getElementById("info9").innerHTML = cur[6][0];
+    document.getElementById("info10").innerHTML = cur[6][1];
+
+    document.getElementById("info11").innerHTML = cur[7][0];
+    document.getElementById("info12").innerHTML = cur[7][1];
+
+    document.getElementById("info13").innerHTML = cur[8][0];
+    document.getElementById("info14").innerHTML = cur[8][1];
+
+    document.getElementById("info15").innerHTML = cur[9][0];
+    document.getElementById("info16").innerHTML = cur[9][1];
+
+
+    document.getElementById("info17").innerHTML = cur[10][0];
+    document.getElementById("info18").innerHTML = cur[10][1];
+
+    document.getElementById("info19").innerHTML = cur[11][0];
+    document.getElementById("info20").innerHTML = cur[11][1];
+
+    document.getElementById("info21").innerHTML = cur[12][0];
+    document.getElementById("info22").innerHTML = cur[12][1];
+
+    document.getElementById("info23").innerHTML = cur[13][0];
+    document.getElementById("info24").innerHTML = cur[13][1];
+
+    document.getElementById("info25").innerHTML = cur[14][0];
+    document.getElementById("info26").innerHTML = cur[14][1];
+
+
+// CONVERT2
+
+    document.getElementById("info27").innerHTML = cur[15][0];
+    document.getElementById("info28").innerHTML = cur[15][1];
+
+    document.getElementById("info29").innerHTML = cur[16][0];
+    document.getElementById("info30").innerHTML = cur[16][1];
+
+    document.getElementById("info31").innerHTML = cur[17][0];
+    document.getElementById("info32").innerHTML = cur[17][1];
+
+    document.getElementById("info33").innerHTML = cur[18][0];
+    document.getElementById("info34").innerHTML = cur[18][1];
+
+    document.getElementById("info35").innerHTML = cur[19][0];
+    document.getElementById("info36").innerHTML = cur[19][1];
+
+    document.getElementById("info37").innerHTML = cur[20][0];
+    document.getElementById("info38").innerHTML = cur[20][1];
+
+
+    document.getElementById("info39").innerHTML = cur[21][0];
+    document.getElementById("info40").innerHTML = cur[21][1];
+
+    document.getElementById("info41").innerHTML = cur[22][0];
+    document.getElementById("info42").innerHTML = cur[22][1];
+
+    document.getElementById("info43").innerHTML = cur[23][0];
+    document.getElementById("info44").innerHTML = cur[23][1];
+
+    document.getElementById("info45").innerHTML = cur[24][0];
+    document.getElementById("info46").innerHTML = cur[24][1];
+
+    document.getElementById("info47").innerHTML = cur[25][0];
+    document.getElementById("info48").innerHTML = cur[25][1];
+
+    document.getElementById("firstconvt").innerHTML = cur[26];
+    document.getElementById("secconvt").innerHTML = cur[27];
+
+    document.getElementById("statstext").innerHTML = cur[32];
+
+    document.getElementById("statsinf1").innerHTML = cur[28][0];
+    document.getElementById("statsinf2").innerHTML = cur[28][1];
+
+    document.getElementById("statsinf3").innerHTML = cur[29][0];
+    document.getElementById("statsinf4").innerHTML = cur[29][1];
+
+     document.getElementById("statsinf5").innerHTML = cur[30][0];
+    document.getElementById("statsinf6").innerHTML = cur[30][1];
+
+     document.getElementById("statsinf7").innerHTML = cur[31][0];
+    document.getElementById("statsinf8").innerHTML = cur[31][1];
+
+  }
+
+	</script>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "90px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<a href="https://xe.com/" style="float: right; color: #FFFF;" target="_blank">xe.com</a>
+</body>

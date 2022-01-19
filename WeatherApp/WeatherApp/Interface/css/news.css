@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif; 
+  margin: 0;
+background-image: linear-gradient(to right, #4D70E7, #7AAAF1);
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  opacity:1;
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 10px;
+  background: #FFFF;
+  opacity:1;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFF;
+}
+
+/* Style the top navigation bar */
+
+
+/* Style the navigation bar links */
+
+
+/* Change color on hover */
+
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+.name {
+  font-size: 20px;
+}
+.text {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-inline {  
+  flex-flow: row wrap;
+  align-items: center;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 15px;
+  width: 350px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.submit {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 18px;
+  background: black;
+  color: #FFFF;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  float: right;
+  right: 5px;
+  font-size: 36px;
+  margin-left: 50px;
+}

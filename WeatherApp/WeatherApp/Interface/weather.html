@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Weather</title>
+
+	<script src="/eel.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="css/weather.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+     <link rel="shortcut icon" href="img/weather-favicon.png" type="image/x-icon">
+
+
+</head>
+<body class="change">
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="mainpage.html"><img src="img/home.png" style="width: 40px;"></a>
+  <a href="con_ser.html"><img src="img/sensor.png" alt="" style="width: 40px;"></a>
+
+  <a href="https://t.me/rehtaeW_bot" target="_blank"><img src="img/iconfinder_social-56_1591869.png " style="width: 40px;"></a>
+  <a href="currency.html"><img src="img/exchange mini.png" style="width: 45px;"></a>
+  <a href="#"><img src="img/news mini.png" style="width: 45px;"></a>
+  <a href="#"><img src="img/lighton.png" style="width: 45px;"></a>
+  
+
+  <a href="#"><div class="dropdown">
+  <img src="img/settings.png" class="dropbtn" style="width: 45px;">
+  <div class="dropdown-content">
+  <a href="#"><input class="color1" type="color" value="#0000ff" /></a>
+  <a href="#"><input class="color2" type="color" value="#add8e6" /></a>
+  </div></a>
+</div>
+
+	
+	<!-- Default color for gradient -->
+
+</div>
+
+
+<span style="font-size:30px;cursor:pointer; color: white;" onclick="openNav()">&#9776;</span>
+	<button id="ten_day" class="button"><a  href="#popup1" style="margin: auto;">10-Day</a></button>
+  <a href="con_ser.html"><img src="img/sensor.png" alt="" style="width: 40px; margin-top: 10px;"></a>
+
+	<input id="input_" type="text" placeholder="Search City..." required="" value="Vanadzor">
+	<button id="buut_surch" class="glow-on-hover" type="button">Get Weather</button>
+	
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2 style="color: #FFFF;">10-Day Weather <span id="cityNameten"></span></h2>
+		<hr>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<span id="date1" class="date_ten"></span>
+			<span id="temp1" class="temp_ten"></span>
+			<span id="value1" class="valie_ten"></span>
+			<span><img id='image_one_ten' src="" class="value_img"></span>
+			<span id="chance1" class="chance_ten"></span>
+			<span id="wspeed1" class="wspeed_ten"></span>
+
+			<hr><br>
+			<span id="date2" class="date_ten"></span>
+			<span id="temp2" class="temp_ten"></span>
+			<span id="value2" class="valie_ten"></span>
+			<span id="chance2" class="chance_ten"></span>
+			<span id="wspeed2" class="wspeed_ten"></span>
+			<hr><br>
+			<span id="date3" class="date_ten"></span>
+			<span id="temp3" class="temp_ten"></span>
+			<span id="value3" class="valie_ten"></span>
+			<span id="chance3" class="chance_ten"></span>
+			<span id="wspeed3" class="wspeed_ten"></span>
+			<hr><br>
+			<span id="date4" class="date_ten"></span>
+			<span id="temp4" class="temp_ten"></span>
+			<span id="value4" class="valie_ten"></span>
+			<span id="chance4" class="chance_ten"></span>
+			<span id="wspeed4" class="wspeed_ten"></span>
+			<hr><br>
+			<span id="date5" class="date_ten"></span>
+			<span id="temp5" class="temp_ten"></span>
+			<span id="value5" class="valie_ten"></span>
+			<span id="chance5" class="chance_ten"></span>
+			<span id="wspeed5" class="wspeed_ten"></span>
+			<hr><br>
+			<span id="date6" class="date_ten"></span>
+			<span id="temp6" class="temp_ten"></span>
+			<span id="value6" class="valie_ten"></span>
+			<span id="chance6" class="chance_ten"></span>
+			<span id="wspeed6" class="wspeed_ten"></span>
+			<hr><br>
+			<span id="date7" class="date_ten"></span>
+			<span id="temp7" class="temp_ten"></span>
+			<span id="value7" class="valie_ten"></span>
+			<span id="chance7" class="chance_ten"></span>
+			<span id="wspeed7" class="wspeed_ten"></span>
+			<hr><br>
+			<span id="date8" class="date_ten"></span>
+			<span id="temp8" class="temp_ten"></span>
+			<span id="value8" class="valie_ten"></span>
+			<span id="chance8" class="chance_ten"></span>
+			<span id="wspeed8" class="wspeed_ten"></span>
+			<hr><br>
+			<span id="date9" class="date_ten"></span>
+			<span id="temp9" class="temp_ten"></span>
+			<span id="value9" class="valie_ten"></span>
+			<span id="chance9" class="chance_ten"></span>
+			<span id="wspeed9" class="wspeed_ten"></span>
+			<hr><br>
+			<span id="date10" class="date_ten"></span>
+			<span id="temp10" class="temp_ten"></span>
+			<span id="value10" class="valie_ten"></span>
+			<span id="chance10" class="chance_ten"></span>
+			<span id="wspeed10" class="wspeed_ten"></span>
+			<hr><br>
+			<span id="date1" class="date_ten"></span>
+			<span id="temp11" class="temp_ten"></span>
+			<span id="value11" class="valie_ten"></span>
+			<span id="chance11" class="chance_ten"></span>
+			<span id="wspeed11" class="wspeed_ten"></span>
+
+		</div>
+	</div>
+</div>
+	<div class='main'>
+		<div class="mainInfo">
+			<div class="data"><span id="cityName"></span></div>
+			<div class="data"><span id="time"></span></div>
+			<br>
+			<div class="data"><span id="temp"></span></div>
+			
+			<div class="data"><span id="value"></span></div>
+			
+			
+			
+			<img id='image_one' src="" class="value_img">
+			<div class="minmax"><span id="precip" style="font-size: 30px;"></span></div>
+		</div>
+	</div>
+
+	<div id="get_info" style="border-radius: 30px;">
+		<div class="gen">
+		<h2 class="text">Weather Today <span id="cityName2"></span></h2>
+		<div class="general" style="">
+			<div class="grid-container">
+			  <div class="grid-item"><img src="img/temperature.png" alt=""> High / Low - <span id="info"></span></div>
+			  <div class="grid-item"><img src="img/wind.png"> Wind - <span id="info2"></span></div>
+			  <div class="grid-item"><img src="img/dew-point.png"> Dew Point - <span id="info3"></span></div>  
+			  <div class="grid-item"><img src="img/humidity.png"> Humidity - <span id="info4"></span></div>
+			  <div class="grid-item"><img src="img/presure.png"> Pressure - <span id="info5"></span></div>
+			  <div class="grid-item"><img src="img/uv-index.png" > UV Index - <span id="info6"></span></div>  
+			  <div class="grid-item"><img src="img/eye.png"> Visibility - <span id="info7"></span></div>
+			  <div class="grid-item"><img src="img/moon-phase.png"> Moon Phase - <span id="info8"></span></div>
+			  
+			</div>
+			<br>
+	</div>
+	</div>
+</div>
+
+		<h2 class="text">Today's Forecast for <span id="cityName3"></span></h2>
+			<div class="grid-container2">
+				
+				  <div class="item2" id="item2">
+				  	<img src="img/morning.png" class="iconq"> <span id="info9" class="nameq"></span><br>
+				  	<span id="info10" class="tempor"></span><br>
+				  	<img src="img/raining.png" class="iconq"> <span id="info11"></span>
+				  </div>
+				  <div class="item3">
+				  	<img src="img/afternoon.png" class="iconq"> <span id="info12" class="nameq"></span><br>
+				  	<span id="info13" class="tempor"></span><br>
+				  	<img src="img/raining.png" class="iconq"> <span id="info14"></span>
+				  </div>  
+				  <div class="item4">
+				  	<img src="img/aaz.png" class="iconq"> <span id="info15" class="nameq"></span><br>
+				  	<span id="info16" class="tempor"></span><br>
+				  	<img src="img/raining.png" class="iconq"> <span id="info17"></span>
+				  </div>
+				  <div class="item5">
+				  	<img src="img/overnight.png" class="iconq"> <span id="info18" class="nameq"></span><br>				
+				  	<span id="info19" class="tempor"></span><br>
+				  	<img src="img/raining.png" class="iconq"> <span id="info20"></span>
+				  </div>
+			</div>
+
+		<br>
+		<h2 class="text">Hourly Forecast</h2>
+		<div class="grid-container3">
+		 		<div class="item2">
+					  	<span id="info21" class="nameq"></span><br>
+					  	<span id="info22" class="tempor"></span><br>
+					  	<img src="img/raining.png" class="iconq"> <span id="info23"></span>
+					  </div>
+					  <div class="item3">
+					  	<span id="info24" class="nameq"></span><br>
+					  	<span id="info25" class="tempor"></span><br>
+					  	<img src="img/raining.png" class="iconq"> <span id="info26"></span>
+					  </div>  
+					  <div class="item4">
+					  	<span id="info27" class="nameq"></span><br>
+					  	<span id="info28" class="tempor"></span><br>
+					  	<img src="img/raining.png" class="iconq"> <span id="info29"></span>
+					  </div>
+					  <div class="item5">
+					  	<span id="info30" class="nameq"></span><br>
+					  	<span id="info31" class="tempor"></span><br>
+					  	<img src="img/raining.png" class="iconq"> <span id="info32"></span>
+					  </div>
+					  <div class="item6">
+					  	<span id="info33" class="nameq"></span><br>
+					  	<span id="info34" class="tempor"></span><br>
+					  	<img src="img/raining.png" class="iconq"> <span id="info35"></span>
+					  </div>
+				</div>
+	</div>
+<br>
+		<h2 class="text">Daily Forecast</h2>
+				<div class="grid-container3">
+				 		
+							  <div class="item3">
+							  	<span id="info36" class="nameq"></span><br>
+							  	<span id="info37" class="tempor"></span><br>
+							  	<img src="img/raining.png" class="iconq"> <span id="info38"></span>
+							  </div>  
+							  <div class="item4">
+							  	<span id="info39" class="nameq"></span><br>
+							  	<span id="info40" class="tempor"></span><br>
+							  	<img src="img/raining.png" class="iconq"> <span id="info41"></span>
+							  </div>
+							  <div class="item5">
+							  	<span id="info42" class="nameq"></span><br>
+							  	<span id="info43" class="tempor"></span><br>
+							  	<img src="img/raining.png" class="iconq"> <span id="info44"></span>
+							  </div>
+							  <div class="item6">
+							  	<span id="info45" class="nameq"></span><br>
+							  	<span id="info46" class="tempor"></span><br>
+							  	<img src="img/raining.png" class="iconq"> <span id="info47"></span>
+							  </div>
+							  <div class="item7">
+							  	<span id="info48" class="nameq"></span><br>
+							  	<span id="info49" class="tempor"></span><br>
+							  	<img src="img/raining.png" class="iconq"> <span id="info50"></span>
+							  </div>
+						</div>
+					</div>
+
+				<a href="weather.com" style="color: #FFFF; float: right;">Weather.com</a>
+
+</div>
+					
+
+
+
+
+
+	</div>
+	
+
+
+
+	<script type="text/javascript">
+		async function display_weather() {
+			let place = document.getElementById('input_').value;
+
+			var res = await eel.get_weather(place)();
+			if(res[3] == undefined || res[4] == undefined){
+				document.getElementById('temp').innerHTML = res[2];
+				document.getElementById('cityName').innerHTML = res[0];
+				document.getElementById('cityName2').innerHTML = res[0];
+				document.getElementById('cityName3').innerHTML = res[0];
+				document.getElementById('cityNameten').innerHTML = res[0];
+				
+				document.getElementById('time').innerHTML = res[1];
+				document.getElementById('info').innerHTML = res[5];
+				document.getElementById('info2').innerHTML = res[8];
+				document.getElementById('info3').innerHTML = res[6];
+				document.getElementById('info4').innerHTML = res[7];
+				document.getElementById('info5').innerHTML = res[9];
+				document.getElementById('info6').innerHTML = res[10];
+				document.getElementById('info7').innerHTML = res[11];
+				document.getElementById('info8').innerHTML = res[12];
+				document.getElementById('info9').innerHTML = res[13];
+				document.getElementById('info10').innerHTML = res[14];
+                document.getElementById('info11').innerHTML = res[15];
+                document.getElementById('info12').innerHTML = res[16];
+                document.getElementById('info13').innerHTML = res[17];
+                document.getElementById('info14').innerHTML = res[18];
+                document.getElementById('info15').innerHTML = res[19];
+                document.getElementById('info16').innerHTML = res[20];
+                document.getElementById('info17').innerHTML = res[21];
+                document.getElementById('info18').innerHTML = res[22];
+                document.getElementById('info19').innerHTML = res[23];
+                document.getElementById('info20').innerHTML = res[24];
+                document.getElementById('info21').innerHTML = res[25];
+                document.getElementById('info22').innerHTML = res[26];
+                document.getElementById('info23').innerHTML = res[27];
+                document.getElementById('info24').innerHTML = res[28];
+                document.getElementById('info25').innerHTML = res[29];
+                document.getElementById('info26').innerHTML = res[30];
+                document.getElementById('info27').innerHTML = res[31];
+                document.getElementById('info28').innerHTML = res[32];
+                document.getElementById('info29').innerHTML = res[33];
+                document.getElementById('info30').innerHTML = res[34];
+                document.getElementById('info31').innerHTML = res[35];
+                document.getElementById('info32').innerHTML = res[36];
+                document.getElementById('info33').innerHTML = res[37];
+                document.getElementById('info34').innerHTML = res[38];
+                document.getElementById('info35').innerHTML = res[39];
+                document.getElementById('info36').innerHTML = res[40];
+                document.getElementById('info37').innerHTML = res[41];
+                document.getElementById('info38').innerHTML = res[42];
+                document.getElementById('info39').innerHTML = res[43];
+                document.getElementById('info40').innerHTML = res[44];
+                document.getElementById('info41').innerHTML = res[45];
+                document.getElementById('info42').innerHTML = res[46];
+                document.getElementById('info43').innerHTML = res[47];
+                document.getElementById('info44').innerHTML = res[48];
+                document.getElementById('info45').innerHTML = res[49];
+                document.getElementById('info46').innerHTML = res[50];
+                document.getElementById('info47').innerHTML = res[51];
+                document.getElementById('info48').innerHTML = res[52];
+                document.getElementById('info49').innerHTML = res[53];
+                document.getElementById('info50').innerHTML = res[54];
+				document.getElementById('value').innerHTML = "Not INFO";
+				document.getElementById('precip').innerHTML = "Not INFO";
+				
+				
+			}
+			else{
+
+				document.getElementById('temp').innerHTML = res[2];
+				document.getElementById('cityName').innerHTML = res[0];
+				document.getElementById('cityName2').innerHTML = res[0];
+				document.getElementById('cityName3').innerHTML = res[0];
+				document.getElementById('cityNameten').innerHTML = res[0];
+				document.getElementById('time').innerHTML = res[1];
+				document.getElementById('value').innerHTML = res[3];
+				document.getElementById('precip').innerHTML = res[4];
+				document.getElementById('info').innerHTML = res[5];
+				document.getElementById('info3').innerHTML = res[8];
+				document.getElementById('info2').innerHTML = res[6];
+				document.getElementById('info4').innerHTML = res[7];
+				document.getElementById('info5').innerHTML = res[9];
+				document.getElementById('info6').innerHTML = res[10];
+				document.getElementById('info7').innerHTML = res[11];
+				document.getElementById('info8').innerHTML = res[12];
+				document.getElementById('info9').innerHTML = res[13];
+				document.getElementById('info10').innerHTML = res[14];
+	            document.getElementById('info11').innerHTML = res[15];
+	            document.getElementById('info12').innerHTML = res[16];
+	            document.getElementById('info13').innerHTML = res[17];
+	            document.getElementById('info14').innerHTML = res[18];
+	            document.getElementById('info15').innerHTML = res[19];
+	            document.getElementById('info16').innerHTML = res[20];
+	            document.getElementById('info17').innerHTML = res[21];
+	            document.getElementById('info18').innerHTML = res[22];
+	            document.getElementById('info19').innerHTML = res[23];
+	            document.getElementById('info20').innerHTML = res[24];
+                document.getElementById('info21').innerHTML = res[25];
+                document.getElementById('info22').innerHTML = res[26];
+                document.getElementById('info23').innerHTML = res[27];
+                document.getElementById('info24').innerHTML = res[28];
+                document.getElementById('info25').innerHTML = res[29];
+                document.getElementById('info26').innerHTML = res[30];
+                document.getElementById('info27').innerHTML = res[31];
+                document.getElementById('info28').innerHTML = res[32];
+                document.getElementById('info29').innerHTML = res[33];
+                document.getElementById('info30').innerHTML = res[34];
+                document.getElementById('info31').innerHTML = res[35];
+                document.getElementById('info32').innerHTML = res[36];
+				document.getElementById('info33').innerHTML = res[37];
+                document.getElementById('info34').innerHTML = res[38];
+                document.getElementById('info35').innerHTML = res[39];
+                document.getElementById('info36').innerHTML = res[40];
+                document.getElementById('info37').innerHTML = res[41];
+                document.getElementById('info38').innerHTML = res[42];
+                document.getElementById('info39').innerHTML = res[43];
+                document.getElementById('info40').innerHTML = res[44];
+                document.getElementById('info41').innerHTML = res[45];
+                document.getElementById('info42').innerHTML = res[46];
+                document.getElementById('info43').innerHTML = res[47];
+                document.getElementById('info44').innerHTML = res[48];
+                document.getElementById('info45').innerHTML = res[49];
+                document.getElementById('info46').innerHTML = res[50];
+                document.getElementById('info47').innerHTML = res[51];
+                document.getElementById('info48').innerHTML = res[52];
+                document.getElementById('info49').innerHTML = res[53];
+                document.getElementById('info50').innerHTML = res[54];
+
+
+			if(res[3] == 'Mostly Cloudy' || res[3] == 'Cloudy'){
+				document.getElementById('image_one').src = 'weather-icons/Cloudy.png';
+			}
+			else if(res[3] == 'Partly Cloudy'){
+					document.getElementById('image_one').src = 'weather-icons/PartlyCloudyDay.png';
+			}
+			else if(res[3] == 'Fair' || res[3] == 'Partly Cloudy' || res[3] == 'Mostly Sunny'){
+				document.getElementById('image_one').src = 'weather-icons/PartlyCloudyDay.png';
+			}
+			else if(res[3] == 'Rain' || res[3] == 'Showers' || res[3] == 'Few Showers'){
+				document.getElementById('image_one').src = 'weather-icons/OccLightRain.png';
+			}
+			else if(res[3] == 'ThunderStorms' || res[3] == 'Light Rain'){
+				document.getElementById('image_one').src = 'weather-icons/PartCloudRainThunderDay.png';
+			}
+			else if(res[3] == 'Snow' || res[3] == 'Snow Showers' || res[3] == 'AM Snow Showers'){
+				document.getElementById('image_one').src = 'weather-icons/ModSnow.png';
+			}
+			else if(res[3] == 'Rain/Snow' || res[3] == 'Snow to Rain' || res[3] == 'Rain/Snow Showers'){
+				document.getElementById('image_one').src = 'weather-icons/OccLightSleet.png';
+			}
+			else if(res[3] == 'Clear'){
+				document.getElementById('image_one').src = 'weather-icons/Clear.png';
+			}
+			else if(res[3] == 'Light Snow'){
+				document.getElementById('image_one').src = 'weather-icons/OccLightSnow.png';
+			}
+			else if(res[3] == 'Sunny'){
+				document.getElementById('image_one').src = 'weather-icons/Sunny.png';
+			}
+			else if(res[3] == 'Wintry Mix'){
+				document.getElementById('image_one').src = 'weather-icons/ModSleet.png'
+			}
+		
+}
+
+		}
+
+
+
+		
+		$('#buut_surch').on('click', function(){
+			display_weather();
+		});
+	</script>
+
+	<script>
+		async function display_weather_ten() {
+			let place_ten = document.getElementById('input_').value;
+
+			var res_ten = await eel.get_weather_ten(place_ten)();
+			document.getElementById('date1').innerHTML = res_ten[0];
+			document.getElementById('temp1').innerHTML = res_ten[1];
+			document.getElementById('value1').innerHTML = res_ten[2];
+			document.getElementById('chance1').innerHTML = res_ten[3];
+			document.getElementById('wspeed1').innerHTML = res_ten[4];
+
+			document.getElementById('date2').innerHTML = res_ten[5];
+			document.getElementById('temp2').innerHTML = res_ten[6];
+			document.getElementById('value2').innerHTML = res_ten[7];
+			document.getElementById('chance2').innerHTML = res_ten[8];
+			document.getElementById('wspeed2').innerHTML = res_ten[9];
+
+			document.getElementById('date3').innerHTML = res_ten[10];
+			document.getElementById('temp3').innerHTML = res_ten[11];
+			document.getElementById('value3').innerHTML = res_ten[12];
+			document.getElementById('chance3').innerHTML = res_ten[13];
+			document.getElementById('wspeed3').innerHTML = res_ten[14];
+
+			document.getElementById('date4').innerHTML = res_ten[15];
+			document.getElementById('temp4').innerHTML = res_ten[16];
+			document.getElementById('value4').innerHTML = res_ten[17];
+			document.getElementById('chance4').innerHTML = res_ten[18];
+			document.getElementById('wspeed4').innerHTML = res_ten[19];
+
+			document.getElementById('date5').innerHTML = res_ten[20];
+			document.getElementById('temp5').innerHTML = res_ten[21];
+			document.getElementById('value5').innerHTML = res_ten[22];
+			document.getElementById('chance5').innerHTML = res_ten[23];
+			document.getElementById('wspeed5').innerHTML = res_ten[24];
+
+			document.getElementById('date6').innerHTML = res_ten[25];
+			document.getElementById('temp6').innerHTML = res_ten[26];
+			document.getElementById('value6').innerHTML = res_ten[27];
+			document.getElementById('chance6').innerHTML = res_ten[28];
+			document.getElementById('wspeed6').innerHTML = res_ten[29];
+
+			document.getElementById('date7').innerHTML = res_ten[30];
+			document.getElementById('temp7').innerHTML = res_ten[31];
+			document.getElementById('value7').innerHTML = res_ten[32];
+			document.getElementById('chance7').innerHTML = res_ten[33];
+			document.getElementById('wspeed7').innerHTML = res_ten[34];
+
+			document.getElementById('date8').innerHTML = res_ten[35];
+			document.getElementById('temp8').innerHTML = res_ten[36];
+			document.getElementById('value8').innerHTML = res_ten[37];
+			document.getElementById('chance8').innerHTML = res_ten[38];
+			document.getElementById('wspeed8').innerHTML = res_ten[39];
+
+			document.getElementById('date9').innerHTML = res_ten[40];
+			document.getElementById('temp9').innerHTML = res_ten[41];
+			document.getElementById('value9').innerHTML = res_ten[42];
+			document.getElementById('chance9').innerHTML = res_ten[43];
+			document.getElementById('wspeed9').innerHTML = res_ten[44];
+
+
+			document.getElementById('date10').innerHTML = res_ten[45];
+			document.getElementById('temp10').innerHTML = res_ten[46];
+			document.getElementById('value10').innerHTML = res_ten[47];
+			document.getElementById('chance10').innerHTML = res_ten[48];
+			document.getElementById('wspeed10').innerHTML = res_ten[49];
+
+			document.getElementById('date11').innerHTML = res_ten[50];
+			document.getElementById('temp11').innerHTML = res_ten[51];
+			document.getElementById('value11').innerHTML = res_ten[52];
+			document.getElementById('chance11').innerHTML = res_ten[53];
+			document.getElementById('wspeed11').innerHTML = res_ten[54];
+			
+
+			if(res_ten[2] == 'Sunny'){
+				document.getElementById('image_one_ten').src = 'weather-icons/Sunny.png';
+			}
+		}
+		$('#ten_day').on('click', function(){
+			display_weather_ten();
+		});
+	</script>
+	<!-- <script>
+		function data(){
+
+       document.getElementById('item2').style.backgroundColor = "#303030";
+       document.getElementById('item2').style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+
+       }
+
+	</script> -->
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "90px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $('#click').click(function(){
+        alert('button clicked');
+    });
+     setTimeout(function(){
+        $('#buut_surch').trigger('click');
+    }, 1000);
+});
+</script>
+<script>
+		var css = document.querySelector("h3");
+		var color1 = document.querySelector(".color1");
+		var color2 = document.querySelector(".color2");
+		var body = document.querySelector(".change");
+
+		// Changing color for the gradient
+		function changeGradient() {
+			body.style.background =
+				"linear-gradient(to right, "
+					+ color1.value + ", "
+					+ color2.value + ")";
+
+			css.textContent = body.style.background + ";";
+		}
+
+		color1.addEventListener("input", changeGradient);
+
+		color2.addEventListener("input", changeGradient);
+	</script>
+
+
+<!-- buut_surch -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/eel.js"></script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+* {
+	font-family: "Roboto", sans-serif;
+/*  font-family: "Source Sans Pro", sans-serif;
+*/
+}
+/*background-color: #191919; 
+  background-color: #303030;*/
+
+body { 
+
+	
+/*background: url(img/a.jpg) no-repeat center center fixed; */
+
+/*morning*/ 
+/*background-image: linear-gradient(to top, #7FABC7, #C3CA8E);*/
+
+/*DAY*/ 
+/*background-image: linear-gradient(to right, #4D70E7, #7AAAF1);*/
+
+/*EVENING	*/
+/*background-image: linear-gradient(#474898, #8B69A1);*/
+
+background-image: linear-gradient(#0C0F37, #2E2E73);
+/*	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+}
+
+/*Main Weather Data*/
+.main{
+	border: none;
+	border-radius: 10px;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: 300px;
+	max-height: 300px;
+    display: inline-block;
+	border: none;
+	border-radius: 10px;
+
+}
+
+.glow-on-hover {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:hover{
+	opacity: 0.9;
+}
+
+
+
+
+
+
+/*
+#buut_surch {
+    width: 100%;
+	display: block;
+    font-size: 20px;
+	outline: none;
+    margin-top: 15px;
+	color: white;
+	border: none;
+    padding: 20px;
+	text-transform: uppercase;
+    border-radius: 10px;
+	font-weight: bold;
+	background: #DA4453; 
+	background: -webkit-linear-gradient(to left, #89216B, #DA4453); 
+	background: linear-gradient(to left, #89216B, #DA4453); 
+	cursor: pointer;
+}*/
+
+#temp {
+    padding: 5px;
+	font-weight: bold;
+	font-size: 90px;
+
+}
+span{
+    display: inline-block;
+}
+.butte {
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	width: 150px;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#input_ {
+	display: block;
+	border: none;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	outline: none;
+	width: 99.5%;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+	font-family: monospace;
+
+}
+
+#input_: :placeholder {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+
+.mainInfo {
+	margin: auto;
+	height: 100%;
+	border-radius: 20px;
+	opacity:1;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+/*Main Weather, items*/
+#cityName {
+	font-size: 25px;
+	padding-top: 5px;
+}
+
+#time {
+	font-size: 20px;
+	padding-top: 5px;
+}
+
+#value {
+	font-size: 35px;
+	margin-top: -10px;
+}
+
+
+#precip {
+	font-size: 20px;
+
+
+}
+
+.data {
+	margin-left: 10px;
+}
+
+/*End Main Weather, items*/
+
+
+/*End Main Weather Data*/
+
+
+
+/*icons*/
+
+.icons {
+	float: right;  
+	position:fixed;
+    bottom:5px;
+    right:5px;
+}
+
+
+
+.value_img {
+	float: right;
+	margin-right: 20px;
+	margin-top: -220px;
+}
+
+.minmax {
+	float: right; 
+	margin-right: 50px;
+	margin-top: -10px;
+}
+
+.general {
+	width: 100%;
+	height: auto;
+	margin: auto;
+
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container2 > div {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+
+}
+
+
+.grid-container3 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container3 > div {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+
+.text {
+	color: white; margin-left: 10px;
+}
+
+.tap {
+	background-color: rgba(255, 255, 255, 0.1); 
+	border-radius: 10px;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 25px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  float: right;
+  right: 5px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.nameq {
+	font-size: 25px;
+}
+
+.tempor {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.iconq{
+	margin-left: -30px;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+ 
+  .grid-container {
+  grid-template-columns: auto auto;
+  
+}
+
+.tempor {
+	font-size: 20px;
+}
+
+.iconq{
+	margin-left: 0px;
+}
+.nameq {
+	font-size: 20px;
+}
+
+
+
+}
+
+.button a {
+  text-decoration: none;
+  color: white;
+}
+.button {
+  background-color: rgba(255, 255, 255, 0.1); 
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  border-radius: 10px;
+  border:none;
+  width: 100px;
+}
+.button:hover {
+  box-shadow: 5px 10px #888888;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  opacity:1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  color: #FFFF;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFFF;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 80%;
+  }
+  .popup{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px){
+  .box{
+    width: 100%;
+  }
+  .popup{
+    width: 100%;
+  }
+}
+
+.date_ten {
+	font-size: 20px;
+}
+
+.temp_ten {
+	font-size: 23px;
+	font-weight: bold;
+	margin-left: 15px;
+}
+.valie_ten {
+	font-size: 20px;
+	margin-left: 15px;
+}
+
+.chance_ten {
+	font-size: 20px;
+	margin-left: 15px;
+}
+
+.wspeed_ten {
+	font-size: 20px;
+	margin-left: 15px;
+}
+
+.dropbtn {
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+

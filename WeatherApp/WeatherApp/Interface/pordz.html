@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="/eel.js"></script>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  background: url(https://img.17qq.com/images/dnohnmgdv.jpeg);
+}
+
+/* Style the top navigation bar */
+
+
+/* Style the navigation bar links */
+
+
+/* Change color on hover */
+
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<!-- Header -->
+<div class="header">
+  <h1>NEWS</h1>
+  <img src="img/newspage.png" alt="">
+</div>
+
+<!-- Navigation Bar -->
+
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h2>der toxel</h2>
+    <h5>text</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+  <script>
+  async function sum() {
+  var a = document.getElementById("data_1").innerHTML = "London";
+  eel.get_News(a)(callback); // change here
+  }
+
+// add function as
+ function callback(newsHtmllist)
+  {    
+    document.getElementById("name").innerHTML = newsHtmllist[0];
+    document.getElementById("title").innerHTML = newsHtmllist[1];
+    document.getElementById("text").innerHTML = newsHtmllist[2];
+    document.getElementById("time").innerHTML = newsHtmllist[3];
+  }
+
+  </script>
+</body>
+</html>

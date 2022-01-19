@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="/eel.js"></script>
+  <style>
+    
+    body {
+  background-color: #f15050;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+body #wrapper {
+  width: 100%;
+}
+body #wrapper ul {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  height: 150px;
+  background-color: #fff;
+  font-size: 0px;
+}
+body #wrapper ul:hover li {
+  width: 13.33333%;
+}
+body #wrapper ul li {
+  display: inline-block;
+  float: left;
+  width: 16.66667%;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: 0px 1px 3px white;
+  border-right: thin solid lightgray;
+}
+body #wrapper ul li:last-child {
+  border-right: none;
+}
+body #wrapper ul li:hover {
+  background: #e6e6e6;
+  width: 33.33333%;
+  -moz-box-shadow: inset 10px 10px 10px -10px rgba(0, 0, 0, 0.3), inset -10px 10px 10px -10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 10px 10px 10px -10px rgba(0, 0, 0, 0.3), inset -10px 10px 10px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 10px 10px 10px -10px rgba(0, 0, 0, 0.3), inset -10px 10px 10px -10px rgba(0, 0, 0, 0.3);
+}
+body #wrapper ul li a {
+  display: block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 19px;
+  height: 150px;
+  text-decoration: none;
+  font-size: 38px;
+  color: gray;
+}
+body #wrapper ul li a:visited {
+  color: gray;
+}
+body #wrapper ul li div {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+  <ul>
+    <li>
+      <a href="weather.html">
+        <img src="img/weather mini.png" alt="">
+        </i>
+        <div>
+          ArmWeatherNet
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="currency.html">
+        <img src="img/exchange mini.png" alt="">
+        </i>
+        <div>
+          Currency Converter
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://t.me/rehtaeW_bot" target="_blank">
+        <img src="img/telegram.png" style="width: 60px;">
+        </i>
+        <div>
+          Telegram Bot
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="news.html">
+        <img src="img/news mini.png" alt="">
+        </i>
+        <div>
+          News
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="signIn.html">
+        <img src="img/sign-in.png" style="width: 60px;">
+        </i>
+        <div>
+          Sign In
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="signUp.html">
+        <img src="img/sign-up.png" >
+        </i>
+        <div>
+          Sign UP
+        </div>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+</body>
+</html>
