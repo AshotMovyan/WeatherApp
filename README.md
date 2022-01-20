@@ -2,12 +2,11 @@
 
 ![](https://komarev.com/ghpvc/?username=VladKalachev)
 
-## I'm a FrontEnd Developer, and Teacher
+## I'm a Game Developer
 - 💪 I like to write code
-- 🎉 I love to paint and play the guitar
+- 🎉 I like to play computer games
 - 🥅 I am constantly learning new things
-- ⚡ I love writing an article for https://webtricks-master.ru/
-- 🤹🏽 I like to shoot videos for youtube 
+- 🤹🏽 I love sharing experiences
 
 ### Connect with me:
 
