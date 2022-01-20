@@ -1,4 +1,4 @@
-### Hi there 👋, I'm Vlad
+### Hi there 👋, I'm Ashot
 
 ![](https://komarev.com/ghpvc/?username=VladKalachev)
 
